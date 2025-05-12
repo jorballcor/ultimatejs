@@ -25,5 +25,25 @@ function getMinorMajor(arr) {
 
 }
 
+
+function getMinorMajorMoreNative(arr) {
+
+    let minor = 0;
+    let major = 0;
+
+    for (let number of arr) {
+
+       minor = minor < number ?  minor : number;
+       major = major > number ? major : number;
+    }
+
+
+    return [minor, major]
+
+}
+
 let numbers = getMinorMajor(array)
+let nativeNumbers = getMinorMajorMoreNative(array)
+
 console.log(numbers)
+console.log(nativeNumbers)
